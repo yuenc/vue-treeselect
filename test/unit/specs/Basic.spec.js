@@ -832,7 +832,7 @@ describe('Basic', () => {
 
     wrapper.vm.openMenu()
 
-    const optionsWrappers = wrapper.findAll(Option).wrappers
+    const optionsWrappers = wrapper.findAllComponents(Option).wrappers
     const a = optionsWrappers.find(optionWrapper => optionWrapper.vm.node.id === 'a')
       .find('.vue-treeselect__option')
     const aa = optionsWrappers.find(optionWrapper => optionWrapper.vm.node.id === 'aa')

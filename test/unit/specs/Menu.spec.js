@@ -133,7 +133,7 @@ describe('Menu', () => {
       },
     })
     const { vm } = wrapper
-    const input = wrapper.find(Input)
+    const input = wrapper.findComponent(Input)
 
     const assertInputValue = expected => {
       expect(vm.trigger.searchQuery).toBe(expected)

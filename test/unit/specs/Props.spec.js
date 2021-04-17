@@ -1489,7 +1489,7 @@ describe('Props', () => {
       const { vm } = wrapper
 
       expect(vm.forest.selectedNodeIds).toEqual([ 'a', 'b', 'c', 'd' ])
-      expect(wrapper.findAll(MultiValueItem).length).toBe(4)
+      expect(wrapper.findAllComponents(MultiValueItem).length).toBe(4)
       expect(wrapper.contains('.vue-treeselect__limit-tip')).toBe(false)
     })
 
@@ -1517,7 +1517,7 @@ describe('Props', () => {
       const { vm } = wrapper
 
       expect(vm.forest.selectedNodeIds).toEqual([ 'a', 'b', 'c', 'd' ])
-      expect(wrapper.findAll(MultiValueItem).length).toBe(1)
+      expect(wrapper.findAllComponents(MultiValueItem).length).toBe(1)
       expect(wrapper.contains('.vue-treeselect__limit-tip')).toBe(true)
       expect(wrapper.find('.vue-treeselect__limit-tip').text()).toBe('and 3 more')
     })
@@ -2062,7 +2062,7 @@ describe('Props', () => {
         expect(vm.localSearch.noResults).toBe(false)
 
         const expectedMatchedNodeIds = [ 'ab', 'b' ]
-        const options = wrapper.findAll(Option)
+        const options = wrapper.findAllComponents(Option)
         expect(options.length).toBe(4)
         options.wrappers.forEach(option => {
           const { node } = option.vm
