@@ -1,8 +1,8 @@
 import { defineComponent } from 'vue'
 import { mount } from '@vue/test-utils'
 import sleep from 'yaku/lib/sleep'
-import Treeselect from '@src/components/Treeselect'
-import Option from '@src/components/Option'
+import Treeselect from '@/components/Treeselect.vue'
+import Option from '@/components/Option.vue'
 
 describe('Basic', () => {
   describe('nodeMap', () => {

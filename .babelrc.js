@@ -2,7 +2,7 @@ module.exports = api => {
   api.cache.never()
 
   const presets = [
-    [ '@babel/preset-env', { modules: false } ],
+    [ '@babel/preset-env', { modules: 'auto' } ],
   ]
   const plugins = [
     "@vue/babel-plugin-jsx",

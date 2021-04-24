@@ -1,5 +1,5 @@
 // import { mount } from '@vue/test-utils'
-// import Treeselect from '@src/components/Treeselect'
+// import Treeselect from '@/components/Treeselect.vue'
 // import { findLabelByNodeId } from './shared'
 
 // Currently @vue/test-utils doesn't properly handle scoped slots.

@@ -12,13 +12,13 @@ import {
   findOptionByNodeId,
   findLabelContainerByNodeId,
 } from './shared'
-import Treeselect from '@src/components/Treeselect'
-import Option from '@src/components/Option'
-import MultiValueItem from '@src/components/MultiValueItem'
+import Treeselect from '@/components/Treeselect.vue'
+import Option from '@/components/Option.vue'
+import MultiValueItem from '@/components/MultiValueItem.vue'
 import {
   UNCHECKED, CHECKED, INDETERMINATE,
   ALL, BRANCH_PRIORITY, LEAF_PRIORITY, ALL_WITH_INDETERMINATE,
-} from '@src/constants'
+} from '@/constants'
 
 describe('Props', () => {
   describe('allowClearingDisabled', () => {

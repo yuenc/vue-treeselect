@@ -1,8 +1,8 @@
 import { mount } from '@vue/test-utils'
 import sleep from 'yaku/lib/sleep'
 import { typeSearchText, findMenu, findVisibleOptions, findOptionByNodeId, findOptionArrowByNodeId } from './shared'
-import Treeselect from '@src/components/Treeselect'
-import { INPUT_DEBOUNCE_DELAY } from '@src/constants'
+import Treeselect from '@/components/Treeselect.vue'
+import { INPUT_DEBOUNCE_DELAY } from '@/constants'
 
 describe('Searching', () => {
   describe('local search', () => {

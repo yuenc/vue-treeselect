@@ -1,6 +1,6 @@
 import sleep from 'yaku/lib/sleep'
-import Option from '@src/components/Option'
-import { INPUT_DEBOUNCE_DELAY } from '@src/constants'
+import Option from '@/components/Option.vue'
+import { INPUT_DEBOUNCE_DELAY } from '@/constants'
 
 export function $(selector, context = document) {
   return context.querySelector(selector)

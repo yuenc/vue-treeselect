@@ -15,7 +15,7 @@ import {
   pressDeleteKey,
   pressAKey,
 } from './shared'
-import Treeselect from '@src/components/Treeselect'
+import Treeselect from '@/components/Treeselect.vue'
 
 describe('Keyboard Support', () => {
   it('(enter + arrows + home + end) keys should trigger opening menu', () => {

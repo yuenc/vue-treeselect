@@ -1,6 +1,6 @@
 import { mount } from '@vue/test-utils'
 import { leftClick } from './shared'
-import Treeselect from '@src/components/Treeselect'
+import Treeselect from '@/components/Treeselect.vue'
 
 describe('Control', () => {
   it('should toggle the menu when the arrow is clicked', () => {

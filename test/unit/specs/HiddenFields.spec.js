@@ -1,5 +1,5 @@
 import { mount } from '@vue/test-utils'
-import Treeselect from '@src/components/Treeselect'
+import Treeselect from '@/components/Treeselect.vue'
 
 describe('Hidden Fields', () => {
   let wrapper

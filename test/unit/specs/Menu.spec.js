@@ -4,8 +4,8 @@ import {
   leftClick, typeSearchText,
   findMenu, findOptionByNodeId,
 } from './shared'
-import Treeselect from '@src/components/Treeselect'
-import Input from '@src/components/Input'
+import Treeselect from '@/components/Treeselect.vue'
+import Input from '@/components/Input.vue'
 
 describe('Menu', () => {
   it('should blur the input & close the menu after clicking anywhere outside the component', async () => {

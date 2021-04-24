@@ -1,7 +1,7 @@
 /* eslint import/namespace: 0 */
 
 import sleep from 'yaku/lib/sleep'
-import * as utils from '@src/utils'
+import * as utils from '@/utils'
 
 describe('Utils', () => {
   describe('Debugging Helpers', () => {

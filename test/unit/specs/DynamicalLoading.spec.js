@@ -9,8 +9,8 @@ import {
   findOptionArrowContainerByNodeId,
   findChildrenOptionListByNodeId,
 } from './shared'
-import Treeselect from '@src/components/Treeselect'
-import { CHECKED } from '@src/constants'
+import Treeselect from '@/components/Treeselect.vue'
+import { CHECKED } from '@/constants'
 
 describe('Dynamical Loading', () => {
   describe('Verify props', () => {
