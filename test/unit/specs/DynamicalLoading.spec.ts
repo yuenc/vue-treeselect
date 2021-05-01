@@ -99,7 +99,7 @@ describe('Dynamical Loading', () => {
       vm.openMenu()
 
       // children awaits to be loaded
-      expect(vm.forest.nodeMap.a.children).toBeEmptyArray()
+      expect(vm.forest.nodeMap.a.children).toEqual([])
       // collapsed by default
       expect(vm.forest.nodeMap.a.isExpanded).toBe(false)
       // other things...
@@ -117,7 +117,7 @@ describe('Dynamical Loading', () => {
       // wait for `callback()` to be called
       await sleep(DELAY)
       // options should has been reinitilaized
-      expect(vm.forest.nodeMap.a.children).toBeNonEmptyArray()
+      expect(vm.forest.nodeMap.a.children).toEqual([])
       expect(vm.forest.nodeMap.a.childrenStates.isLoaded).toBe(true)
       expect(vm.forest.nodeMap.a.childrenStates.isLoading).toBe(false)
       childrenOptionList = findChildrenOptionListByNodeId(wrapper, 'a')
@@ -232,13 +232,13 @@ describe('Dynamical Loading', () => {
       expect(spyForLoadOptions.calls.count()).toBe(1) // but not triggers another loading
 
       await sleep(DELAY / 2)
-      expect(vm.forest.nodeMap.a.children).toBeNonEmptyArray()
+      expect(vm.forest.nodeMap.a.children).toEqual([])
     })
 
     it('after loading children options of a checked node, should also check these children options', async () => {
       let called = 0
       const wrapper = mount(Treeselect, {
-        sync: false,
+        // sync: false,
         propsData: {
           options: [ {
             id: 'a',
@@ -324,7 +324,7 @@ describe('Dynamical Loading', () => {
             label: 'a',
             children: null,
           } ],
-          value: 'aa', // <- this creates a fallback node
+          modelValue: 'aa', // <- this creates a fallback node
           loadOptions({ parentNode, callback }) {
             setTimeout(() => {
               parentNode.children = [ {
@@ -823,7 +823,7 @@ describe('Dynamical Loading', () => {
         components: { Treeselect },
         data: () => ({
           options: null,
-          value: 'a', // <- this creates a fallback node
+          modelValue: 'a', // <- this creates a fallback node
           loadOptions({ callback }) {
             setTimeout(() => {
               wrapper.vm.options = [ {
@@ -992,7 +992,7 @@ describe('Dynamical Loading', () => {
       expect(vm.rootOptionsStates.isLoading).toBe(true)
 
       await sleep(DELAY)
-      expect(vm.forest.normalizedOptions).toBeNonEmptyArray()
+      expect(vm.forest.normalizedOptions).not.toEqual([])
 
       expect(vm.menu.current).toBe('a')
       expect(vm.forest.nodeMap.a.isHighlighted).toBe(true)

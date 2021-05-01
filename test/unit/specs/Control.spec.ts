@@ -5,8 +5,8 @@ import Treeselect from '@/components/Treeselect.vue'
 describe('Control', () => {
   it('should toggle the menu when the arrow is clicked', () => {
     const wrapper = mount(Treeselect, {
-      sync: false,
-      attachToDocument: true,
+      // sync: false,
+      // attachToDocument: true,
       propsData: {
         options: [],
       },
