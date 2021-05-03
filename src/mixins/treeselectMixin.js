@@ -1540,7 +1540,8 @@ export default {
             ? lowerCased.label
             : parentNode.nestedSearchLabel + ' ' + lowerCased.label
 
-          const normalized = this.$set(this.forest.nodeMap, id, createMap())
+          // const normalized = this.$set(this.forest.nodeMap, id, createMap())
+          const normalized = createMap();
           this.$set(normalized, 'id', id)
           this.$set(normalized, 'label', label)
           this.$set(normalized, 'level', level)
@@ -1628,6 +1629,7 @@ export default {
               }
             }
           }
+          this.$set(this.forest.nodeMap, id, normalized)
 
           return normalized
         })
